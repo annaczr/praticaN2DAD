@@ -7,7 +7,7 @@ function addProduto(){
     preco : document.querySelector("#preco").value
   }
   //confirmar se o produto deve ser adicionado
-  let confirme = confirm("popopo")
+  let confirme = confirm("Deseja inserir esse produto?")
 
   if(confirme == true){
     switch(Produto.marca){
@@ -33,8 +33,27 @@ function addProduto(){
         break;
       }
 
+      // var lista = document.querySelectorAll("#resultado div ul")
+      // for(i = 0; i < lista.length; i++){
+      //   for(u = 0; u<lista[i].length; u++){
+      //     let elemento = lista[i].textContent
+      //     elemento.substring(2,3)
+
+      //     if(Produto.codigo == ){
+            
+      //     }
+      //   }
+      // }
+
+
       alert(`${Produto.produto} foi adicionado com sucesso.`)
   }else{
     alert(`${Produto.produto} não foi adicionado.`)
   }
+  
+  //limpar os input
+  document.querySelector("#marca").value = ""
+  document.querySelector("#name").value = ""
+  document.querySelector("#number").value = ""
+  document.querySelector("#preco").value = ""
 }
